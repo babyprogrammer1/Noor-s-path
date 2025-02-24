@@ -50,10 +50,9 @@ nav a:hover {
 }
 
 .content {
-    padding: 20px;
-    max-width: 1200px;
+    padding: 5px;
+    max-width: 1300px;
     margin: auto;
-    flex: 1;
 }
 
 .section {
@@ -97,7 +96,7 @@ h1, h2, h3 {
     height: auto;
 }
 
-#past-events {
+#past-events{
     margin: auto;
     width: 50%;
     height: auto;
@@ -116,8 +115,6 @@ h1, h2, h3 {
 }
 
 .event-details, .plans {
-    text-align: left;
-    max-width: 800px;
     margin: 20px auto;
 }
 
