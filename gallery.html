@@ -22,15 +22,15 @@
         <section class="section">
             <h2>Gallery</h2>
             <div class="image-gallery">
-                <a href="images/img1.jpg" download><img src="images/img1.jpg" alt="Image 1"></a>
-                <a href="images/img2.jpg" download><img src="images/img2.jpg" alt="Image 2"></a>
-                <a href="images/img3.jpg" download><img src="images/img3.jpg" alt="Image 3"></a>
-                <a href="images/img4.jpg" download><img src="images/img4.jpg" alt="Image 4"></a>
-                <a href="images/mission.jpg" download><img src="images/mission.jpg" alt="Mission"></a>
-                <a href="images/thisyear.jpg" download><img src="images/thisyear.jpg" alt="This Year"></a>
-                <a href="images/donations.jpg" download><img src="images/donations.jpg" alt="Donations"></a>
-                <a href="images/aboutus.jpg" download><img src="images/aboutus.jpg" alt="About Us"></a>
-                <a href="images/vision.jpg" download><img src="images/vision.jpg" alt="Vision"></a>
+                <img src="images/img1.jpg" alt="Image 1" onclick="openModal(this)">
+                <img src="images/img2.jpg" alt="Image 2" onclick="openModal(this)">
+                <img src="images/img3.jpg" alt="Image 3" onclick="openModal(this)">
+                <img src="images/img4.jpg" alt="Image 4" onclick="openModal(this)">
+                <img src="images/mission.jpg" alt="Mission" onclick="openModal(this)">
+                <img src="images/thisyear.jpg" alt="This Year" onclick="openModal(this)">
+                <img src="images/donations.jpg" alt="Donations" onclick="openModal(this)">
+                <img src="images/aboutus.jpg" alt="About Us" onclick="openModal(this)">
+                <img src="images/vision.jpg" alt="Vision" onclick="openModal(this)">
             </div>
         </section>
     </main>
@@ -39,5 +39,28 @@
         <p>&copy; 2025 Noor's Path. All rights reserved.</p>
         <p>Designed by &copy;ZoE</p>
     </footer>
+
+    <!-- Modal -->
+    <div id="modal" class="modal" onclick="closeModal()">
+        <span class="close">&times;</span>
+        <img class="modal-content" id="modal-img">
+        <div id="caption"></div>
+    </div>
+
+    <script>
+        function openModal(element) {
+            var modal = document.getElementById("modal");
+            var modalImg = document.getElementById("modal-img");
+            var captionText = document.getElementById("caption");
+            modal.style.display = "block";
+            modalImg.src = element.src;
+            captionText.innerHTML = element.alt;
+        }
+
+        function closeModal() {
+            var modal = document.getElementById("modal");
+            modal.style.display = "none";
+        }
+    </script>
 </body>
 </html>
