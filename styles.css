@@ -22,6 +22,11 @@ header, footer {
     padding: 1em;
 }
 
+h1 img {
+    width: 150px;
+    vertical-align: middle;
+}
+
 footer {
     bottom: 0;
     width: 100%;
@@ -109,6 +114,15 @@ h1, h2, h3 {
     width: 150px;
     height: auto;
     margin-right: 10px;
+}
+
+#contact {
+    background-image: url(images/logo.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    color:  #013220;
+    padding: 20px;
 }
 
 @media (max-width: 768px) {
