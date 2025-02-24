@@ -1,7 +1,13 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&family=Quicksand:wght@400;700&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
 body {
     background-color: #e8f5e9;
     color: #2e7d32;
-    font-family: Arial, sans-serif;
+    font-family: 'Nunito', sans-serif;
     margin: 0;
     padding: 0;
     display: flex;
@@ -17,7 +23,6 @@ header, footer {
 }
 
 footer {
-    position: fixed;
     bottom: 0;
     width: 100%;
 }
@@ -45,10 +50,6 @@ nav a:hover {
     text-align: center;
 }
 
-#donations {
-    margin-bottom: 100px;
-}
-
 ul {
     list-style-type: none;
     padding: 0;
@@ -69,10 +70,7 @@ a:hover {
 
 h1, h2, h3 {
     text-align: center;
-}
-
-#vision {
-    margin-bottom: 100px;
+    font-family: 'Quicksand', sans-serif;
 }
 
 #about-img, #vision-img, #donations-img, #mission-img, #thisyear-img, .image-gallery img, .content img {
@@ -107,6 +105,12 @@ h1, h2, h3 {
     margin: 20px auto;
 }
 
+#barcode-img {
+    width: 150px;
+    height: auto;
+    margin-right: 10px;
+}
+
 @media (max-width: 768px) {
     nav a {
         display: block;
@@ -124,6 +128,12 @@ h1, h2, h3 {
 
     .event-details, .plans {
         text-align: center;
+    }
+
+    #barcode-img {
+        float: none;
+        display: block;
+        margin: 0 auto 10px;
     }
 }
 
