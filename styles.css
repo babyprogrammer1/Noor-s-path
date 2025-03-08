@@ -170,7 +170,7 @@ h1, h2, h3 {
         top: 60px;
         left: 0;
         width: 100%;
-        background-color: rgba(27, 94, 32, 0.9); /* Slightly transparent background */
+        background-color: rgba(27, 94, 32, 0.5); /* Slightly transparent background */
         z-index: 1000;
     }
 
