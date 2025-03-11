@@ -49,27 +49,11 @@
         <p>Designed by &copy;ZoE</p>
     </footer>
     <script>
+        // Function to toggle the navigation menu on smaller screens
         function toggleMenu() {
             var nav = document.querySelector('nav');
             nav.style.display = nav.style.display === 'flex' ? 'none' : 'flex';
         }
-
-        window.addEventListener('scroll', function() {
-            var header = document.querySelector('header');
-            var content = document.querySelector('.content');
-            var footer = document.querySelector('footer');
-            var scrollPosition = window.scrollY;
-
-            if (scrollPosition > 50) {
-                header.classList.add('scrolled');
-                content.classList.add('scrolled');
-                footer.classList.add('scrolled');
-            } else {
-                header.classList.remove('scrolled');
-                content.classList.remove('scrolled');
-                footer.classList.remove('scrolled');
-            }
-        });
     </script>
 </body>
 </html>

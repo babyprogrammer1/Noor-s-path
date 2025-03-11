@@ -26,6 +26,10 @@ header, footer {
     position: relative;
 }
 
+p {
+    animation: fadeIn 1s ease-in-out; /* Animation for paragraphs */
+}
+
 /* Styles for the logo and header text */
 h1 {
     display: flex;
@@ -101,6 +105,7 @@ nav a:hover {
 ul {
     list-style-type: none;
     padding: 0;
+    animation: fadeIn 1s ease-in-out; /* Animation for lists */
 }
 
 ul li {
