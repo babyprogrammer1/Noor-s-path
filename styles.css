@@ -1,9 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&family=Quicksand:wght@400;700&display=swap');
 
+/* Reset box-sizing for all elements */
 * {
     box-sizing: border-box;
 }
 
+/* Basic styles for the body */
 body {
     background-color: #e8f5e9;
     color: #2e7d32;
@@ -15,6 +17,7 @@ body {
     min-height: 100vh;
 }
 
+/* Styles for header and footer */
 header, footer {
     background-color: #1b5e20;
     color: white;
@@ -23,11 +26,13 @@ header, footer {
     position: relative;
 }
 
+/* Styles for the logo and header text */
 h1 {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    animation: fadeIn 1s ease-in-out; /* Animation for header */
 }
 
 h1 img {
@@ -35,11 +40,13 @@ h1 img {
     margin-right: 10px;
 }
 
+/* Footer styles */
 footer {
     bottom: 0;
     width: 100%;
 }
 
+/* Navigation styles */
 nav {
     display: flex;
     justify-content: center;
@@ -57,6 +64,7 @@ nav a:hover {
     text-decoration: underline;
 }
 
+/* Hamburger menu styles for smaller screens */
 .hamburger {
     display: none;
     flex-direction: column;
@@ -73,17 +81,23 @@ nav a:hover {
     margin: 4px 0;
 }
 
+/* Content styles */
 .content {
     padding: 5px;
     max-width: 1300px;
     margin: auto;
 }
 
+/* Section styles with animation */
 .section {
     margin-top: 20px;
     text-align: center;
+    opacity: 0; /* Initially hidden */
+    transform: translateY(20px); /* Initially moved down */
+    transition: opacity 1s ease-in-out, transform 1s ease-in-out; /* Smooth transition */
 }
 
+/* List styles */
 ul {
     list-style-type: none;
     padding: 0;
@@ -93,6 +107,7 @@ ul li {
     margin: 10px 0;
 }
 
+/* Link styles */
 a {
     color: #2e7d32;
     text-decoration: none;
@@ -102,16 +117,20 @@ a:hover {
     text-decoration: underline;
 }
 
+/* Heading styles with animation */
 h1, h2, h3 {
     text-align: center;
     font-family: 'Quicksand', sans-serif;
+    animation: slideIn 1s ease-in-out; /* Animation for headings */
 }
 
+/* Image styles with animation */
 #about-img, #vision-img, #donations-img, #mission-img, #thisyear-img, .image-gallery img, .content img {
     display: block;
     margin: 0 auto;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    animation: zoomIn 1s ease-in-out; /* Animation for images */
 }
 
 #about-img, #vision-img, #donations-img, #mission-img, #thisyear-img {
@@ -120,12 +139,14 @@ h1, h2, h3 {
     height: auto;
 }
 
+/* Styles for past events section */
 #past-events {
     margin: auto;
     width: 50%;
     height: auto;
 }
 
+/* Image gallery styles */
 .image-gallery {
     display: flex;
     flex-wrap: wrap;
@@ -139,25 +160,61 @@ h1, h2, h3 {
     object-fit: cover;
 }
 
+/* Event details and plans styles */
 .event-details, .plans {
     margin: 20px auto;
 }
 
+/* Barcode image styles */
 #barcode-img {
     width: 150px;
     height: auto;
     margin-right: 10px;
 }
 
+/* Contact section styles */
 #contact {
     background-image: url(images/logo.png);
-    background-repeat: no-repeat;
+    
     background-position: center;
     background-size: cover;
     color: #013220;
     padding: 20px;
 }
 
+/* Keyframes for animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateY(-20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes zoomIn {
+    from {
+        transform: scale(0.9);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+/* Media queries for smaller screens */
 @media (max-width: 768px) {
     .hamburger {
         display: flex;
