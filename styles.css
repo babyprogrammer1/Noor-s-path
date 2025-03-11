@@ -92,7 +92,7 @@ nav a:hover {
 .section {
     margin-top: 20px;
     text-align: center;
-    opacity: 0; /* Initially hidden */
+    opacity: 1; /* Initially visible */
     transform: translateY(20px); /* Initially moved down */
     transition: opacity 1s ease-in-out, transform 1s ease-in-out; /* Smooth transition */
 }
@@ -131,6 +131,7 @@ h1, h2, h3 {
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     animation: zoomIn 1s ease-in-out; /* Animation for images */
+    cursor: pointer; /* Pointer cursor for clickable images */
 }
 
 #about-img, #vision-img, #donations-img, #mission-img, #thisyear-img {
@@ -150,8 +151,9 @@ h1, h2, h3 {
 .image-gallery {
     display: flex;
     flex-wrap: wrap;
-    gap: 1px;
-    justify-content: center;
+    gap: 10px;
+    justify-content: space-evenly;
+    margin-bottom: 20px;
 }
 
 .image-gallery img {
@@ -175,11 +177,58 @@ h1, h2, h3 {
 /* Contact section styles */
 #contact {
     background-image: url(images/logo.png);
-    
     background-position: center;
     background-size: cover;
     color: #013220;
     padding: 20px;
+}
+
+/* Modal styles */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    padding-top: 60px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.9);
+}
+
+.modal-content {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+}
+
+#caption {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+    text-align: center;
+    color: #ccc;
+    padding: 10px 0;
+}
+
+.close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
 }
 
 /* Keyframes for animations */
