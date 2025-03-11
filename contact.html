@@ -12,16 +12,19 @@
     <link rel="shortcut icon" href="images/logo.png" type="image/x-icon">
 </head>
 <body>
+    <!-- Header section with logo and navigation -->
     <header>
         <h1>
             <img src="images/logo.png" alt="Noor's path logo" width="100px">
             Noor's Path
         </h1>
+        <!-- Hamburger menu for smaller screens -->
         <div class="hamburger" onclick="toggleMenu()">
             <div></div>
             <div></div>
             <div></div>
         </div>
+        <!-- Navigation links -->
         <nav>
             <a href="index.html"><i class="fas fa-home"></i> Home</a>
             <a href="about.html"><i class="fas fa-info-circle"></i> About Us</a>
@@ -29,6 +32,7 @@
             <a href="gallery.html"><i class="fas fa-images"></i> Gallery</a>
         </nav>
     </header>
+    <!-- Main content section -->
     <section class="content" id="contact">
         <h2>Contact Us</h2>
         <p>You can reach us through the following channels:</p>
@@ -38,6 +42,7 @@
             <li><i class="fab fa-instagram"></i> Instagram: <a href="https://www.instagram.com/noors.path" target="_blank">@Noor's Path</a></li>
         </ul>
     </section>
+    <!-- Footer section -->
     <footer>
         <img src="images/barcode.png" alt="Barcode" id="barcode-img">
         <p>&copy; 2025 Noor's Path. All rights reserved.</p>
@@ -48,6 +53,23 @@
             var nav = document.querySelector('nav');
             nav.style.display = nav.style.display === 'flex' ? 'none' : 'flex';
         }
+
+        window.addEventListener('scroll', function() {
+            var header = document.querySelector('header');
+            var content = document.querySelector('.content');
+            var footer = document.querySelector('footer');
+            var scrollPosition = window.scrollY;
+
+            if (scrollPosition > 50) {
+                header.classList.add('scrolled');
+                content.classList.add('scrolled');
+                footer.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+                content.classList.remove('scrolled');
+                footer.classList.remove('scrolled');
+            }
+        });
     </script>
 </body>
 </html>
