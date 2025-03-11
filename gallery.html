@@ -12,16 +12,19 @@
     <link rel="shortcut icon" href="images/logo.png" type="image/x-icon">
 </head>
 <body>
+    <!-- Header section with logo and navigation -->
     <header>
         <h1>
             <img src="images/logo.png" alt="Noor's path logo" width="100px">
             Noor's Path
         </h1>
+        <!-- Hamburger menu for smaller screens -->
         <div class="hamburger" onclick="toggleMenu()">
             <div></div>
             <div></div>
             <div></div>
         </div>
+        <!-- Navigation links -->
         <nav>
             <a href="index.html"><i class="fas fa-home"></i> Home</a>
             <a href="about.html"><i class="fas fa-info-circle"></i> About Us</a>
@@ -29,31 +32,56 @@
             <a href="gallery.html"><i class="fas fa-images"></i> Gallery</a>
         </nav>
     </header>
+    <!-- Main content section -->
     <main class="content">
+        <!-- Gallery section -->
         <section class="section">
             <h2>Gallery</h2>
+            <p>Explore the gallery of Noor's Path, showcasing past events and activities.</p>
             <div class="image-gallery">
-                <img src="images/img1.jpg" alt="Image 1">
-                <img src="images/img2.jpg" alt="Image 2">
-                <img src="images/img3.jpg" alt="Image 3">
-                <img src="images/img4.jpg" alt="Image 4">
-                <img src="images/mission.jpg" alt="Mission">
-                <img src="images/thisyear.jpg" alt="This Year">
-                <img src="images/donations.jpg" alt="Donations">
-                <img src="images/aboutus.jpg" alt="About Us">
-                <img src="images/vision.jpg" alt="Vision">
+                <img src="images/img1.jpg" alt="Gallery Image 1" onclick="openModal(this)">
+                <img src="images/img2.jpg" alt="Gallery Image 2" onclick="openModal(this)">
+                <img src="images/img3.jpg" alt="Gallery Image 3" onclick="openModal(this)">
+                <img src="images/img4.jpg" alt="Gallery Image 4" onclick="openModal(this)">
+                <img src="images/mission.jpg" alt="Our Mission" onclick="openModal(this)">
+                <img src="images/aboutus.jpg" alt="About Us" onclick="openModal(this)">
+                <img src="images/donations.jpg" alt="Donations" onclick="openModal(this)">
             </div>
         </section>
     </main>
+    <!-- Modal for viewing images -->
+    <div id="modal" class="modal">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <img class="modal-content" id="modal-img">
+        <div id="caption"></div>
+    </div>
+    <!-- Footer section -->
     <footer>
         <img src="images/barcode.png" alt="Barcode" id="barcode-img">
         <p>&copy; 2025 Noor's Path. All rights reserved.</p>
         <p>Designed by &copy;ZoE</p>
     </footer>
     <script>
+        // Function to toggle the navigation menu on smaller screens
         function toggleMenu() {
             var nav = document.querySelector('nav');
             nav.style.display = nav.style.display === 'flex' ? 'none' : 'flex';
+        }
+
+        // Function to open the modal and display the clicked image
+        function openModal(element) {
+            var modal = document.getElementById("modal");
+            var modalImg = document.getElementById("modal-img");
+            var captionText = document.getElementById("caption");
+            modal.style.display = "block";
+            modalImg.src = element.src;
+            captionText.innerHTML = element.alt;
+        }
+
+        // Function to close the modal
+        function closeModal() {
+            var modal = document.getElementById("modal");
+            modal.style.display = "none";
         }
     </script>
 </body>
